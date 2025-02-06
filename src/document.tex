@@ -1,0 +1,27 @@
+% !TeX root = document.tex
+% !TeX program = lualatex
+
+\input{preamble}
+\addbibresource{bibliography.bib}
+
+\begin{document}
+
+\input{defines}
+
+\input{title}
+
+\subfile{content/chapter1/chapter1.tex}
+\subfile{content/chapter2/chapter2.tex}
+\subfile{content/chapter3/chapter3.tex}
+\subfile{content/chapter4/chapter4.tex}
+\subfile{content/chapter5/chapter5.tex}
+
+\subfile{content/appendencies/appendencies.tex}
+
+\listoffigures
+% \listoflistings
+% \listoftables
+% \printindex
+\printbibliography
+
+\end{document}
