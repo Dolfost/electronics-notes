@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(latex_report
+project(electronics_notes
 	VERSION 6.0.0
-	HOMEPAGE_URL https://github.com/Dolfost/lrt
+	HOMEPAGE_URL https://github.com/Dolfost/electronics-notes
 	LANGUAGES NONE
 )
 
