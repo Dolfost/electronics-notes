@@ -4,6 +4,46 @@
 \graphicspath{{images/}}
 
 \chapter{Theory}
+\section{Electric current}
+Electric current is the total charge that passes through some cross-sectional
+area A per unit time. This cross-sectional area could represent a disk placed
+in a gas, plasma, or liquid. \cite{practical_electronics}
+
+If \(\Delta Q\) is the amount of charge passing through an area in a time
+interval \(\Delta t\) , then the average current \(I_{\text{ave}}\) is defined as: \cite{practical_electronics}
+\begin{gather}
+	I_{\text{ave}} = \frac{\Delta Q}{\Delta t}.
+\end{gather}
+
+If the current changes with time, we define the instantaneous current I by
+taking the limit as \(\Delta t\to 0\), so that the current is the instantaneous
+rate at which charge passes through an area: \cite{practical_electronics}
+\begin{gather}
+	I = \lim_{\Delta t \to 0} \frac{\Delta Q}{\Delta t} = \frac{\mathrm d Q}{\mathrm d t}.
+\end{gather}
+The unit of current is coulombs per second, or \emph{ampere} (\(\unit{\ampere}\)):
+\begin{gather}
+	1\unit{\ampere} = 1\unit{\coulomb\per\second}.
+\end{gather}
+In circuit electrons are the who doing all the work and carry energy. 
+\begin{gather}
+	1\unit{\ampere} = -6.24\times 10^{18}\unit{electrons\per\second}.
+\end{gather}
+
+\section{Voltage}
+To get electrical current to flow from one point to another, a voltage must
+exist between the two points. A voltage placed across a conductor gives rise to
+an \emph{electromotive force} (EMF) that is responsible for giving all free
+electrons within the conductor a push. \cite{practical_electronics}
+
+Voltage is also referred to as a potential difference or just potential ---
+they all mean the same thing. Volt is defined to be \cite[p. 12]{practical_electronics}
+\begin{gather}
+	1\unit{\volt} = \frac{1\unit{\watt}}{1\unit{\ampere}}.
+\end{gather}
+
+
+
 
 
 \end{document}
