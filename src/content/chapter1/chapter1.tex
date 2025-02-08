@@ -23,11 +23,7 @@ rate at which charge passes through an area: \cite{practical_electronics}
 \end{gather}
 The unit of current is coulombs per second, or \emph{ampere} (\(\unit{\ampere}\)):
 \begin{gather}
-	1\unit{\ampere} = 1\unit{\coulomb\per\second}.
-\end{gather}
-In circuit electrons are the who doing all the work and carry energy. 
-\begin{gather}
-	1\unit{\ampere} = -6.24\times 10^{18}\unit{electrons\per\second}.
+	1\unit{\ampere} = 1\unit{\coulomb\per\second} = -6.24\times 10^{18}\unit{electrons\per\second}.
 \end{gather}
 
 \section{Voltage}
@@ -41,6 +37,62 @@ they all mean the same thing. Volt is defined to be \cite[p. 12]{practical_elect
 \begin{gather}
 	1\unit{\volt} = \frac{1\unit{\watt}}{1\unit{\ampere}}.
 \end{gather}
+
+\section{Resistance, Resistivity, Conductivity}
+In 1826, Georg Simon Ohm defined the \emph{resistance} as 
+\begin{align}
+	R \equiv \frac{V}{I}, && 1\unit{\ohm}=1\unit{\volt}/1\unit{\ampere}.
+\end{align}
+Now, Ohm’s law isn’t really a law, but rather an empirical statement about the
+behavior of materials. There are some materials\footnote{That said, it only can
+be applied to \emph{ohmic materials.}} for which Ohm’s law actually doesn’t
+work. \cite{practical_electronics}
+
+\paragraph*{Curious note about Ohm’s law}
+Usually you see Ohm’s law written in the following form:
+\begin{gather}
+	V=I\times R.
+\end{gather}
+In this form it is tempting to define voltage in terms of resistance and
+current. It is important to realize that \(R\) is the resistance of an ohmic
+material and is independent of \(V\)  in Ohm’s law. Ohm’s law does not say
+anything about voltage, rather, it defines resistance in terms of it and cannot
+be applied to other areas of physics such as static electricity, because there
+is no current flow. That’s not to say that you can’t apply Ohm’s law to, say,
+predict what voltage must exist across a known resistance, given a measured
+current. \cite[p. 24]{practical_electronics}
+
+\subsubsection{Resistivity and Conductivity}
+Resistivity is a property unique to the material. The \emph{resistivity}
+\(\rho\) is defined as follows:
+\begin{gather}
+	\rho\equiv R\frac{A}{L},
+\end{gather}
+where \(A\) is a cross-sectional area, \(L\) is the wire length, \(R\) is an
+overall wire resistance at provided length. It is measured in
+\unit{\ohm\meter}. \cite{practical_electronics}
+
+Conductivity is an opposite to resistivity
+\begin{gather}
+	\sigma\equiv \frac{1}{\rho},
+\end{gather}
+and is measured in siemens (\unit{1\per\ohm\meter}). \cite{practical_electronics}
+
+Generally, within a certain temperature range, the resistivity for a large
+number of metals obeys the following equation:
+\begin{gather}
+	\rho = \rho_0[1+\alpha(T-T_0)],
+\end{gather}
+where \(\rho\) is calculated resistivity based on reference resistivity
+\(\rho_0\) and temperature \(T_0\). Alpha \(\alpha\) is an \emph{temperature
+coefficient of resistivity} given in \unit{1\per\celsius}. \cite{practical_electronics}   
+
+
+
+
+
+
+
 
 
 
