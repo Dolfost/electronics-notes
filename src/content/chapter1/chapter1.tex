@@ -62,7 +62,7 @@ is no current flow. That’s not to say that you can’t apply Ohm’s law to, s
 predict what voltage must exist across a known resistance, given a measured
 current. \cite[p. 24]{practical_electronics}
 
-\subsubsection{Resistivity and Conductivity}
+\subsection{Resistivity and Conductivity}
 Resistivity is a property unique to the material. The \emph{resistivity}
 \(\rho\) is defined as follows:
 \begin{gather}
@@ -87,13 +87,38 @@ where \(\rho\) is calculated resistivity based on reference resistivity
 \(\rho_0\) and temperature \(T_0\). Alpha \(\alpha\) is an \emph{temperature
 coefficient of resistivity} given in \unit{1\per\celsius}. \cite{practical_electronics}   
 
+\section{Heat and Power}
+Power is defined as 
+\begin{gather}
+	P=VI = V\frac{V}{R} = \frac{V^2}{R},\\
+	P=VI=(IR)I=I^2R.
+\end{gather}
 
+\section{Resistors in circuits}
+When two or more resistors are placed in \textbf{parallel}, the voltage across
+each resistor is the same, but the current through each resistor will vary with
+resistance. Also, the otal resistance of the combination will be lower than
+that of the lowest resistance value present. \cite{practical_electronics}
+\begin{gather}
+	R_{\text{total}} = \frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+\dots},\\
+	R_{\text{total}} = \frac{R_1\times R_2}{R_1+R_2}\text{ -- two resistors in parallel}.
+\end{gather}Meanwhile, current in paraller circuit is the sum of currents of every separate
+component, voltage does not change:
+\begin{gather}
+	I_{\text{total}} = I_1+I_2+I_3+\dots+I_n,\\
+	V_{\text{total}} = V_{\text{in}}.
+\end{gather}
 
-
-
-
-
-
+Total resistance of resistors in \textbf{series} is the sum of resistances:
+\begin{gather}
+	R_{\text{total}}=R_1+R_2+R_3+\dots+R_n.
+\end{gather}
+The sum of all the voltage drops across each series resistor will equal the
+applied voltage across the combination, but current will be constant \cite{practical_electronics}
+\begin{gather}
+	V_{\text{total}}=V_1+V_2+V_3+\dots+V_n,\\
+	I_{\text{total}} = I_{\text{const}}.
+\end{gather}
 
 
 
