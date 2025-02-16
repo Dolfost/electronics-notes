@@ -1,3 +1,10 @@
+cmake_minimum_required(VERSION 3.25)
+
+project(electronics_notes 
+	HOMEPAGE_URL https://github.com/Dolfost/electronics-notes
+	LANGUAGES NONE
+)
+
 list(APPEND CMAKE_MODULE_PATH 
 	"${CMAKE_CURRENT_LIST_DIR}/cmake"
 )
@@ -15,6 +22,15 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/latexmkrc.in"
 	@ONLY
 )
 
+find_package(Git)
+if(Git_FOUND)
+	execute_process(
+	COMMAND ${GIT_EXECUTABLE} log -1 --pretty=format:%h
+			OUTPUT_VARIABLE ELNT_COMMIT_HASH
+	)
+else()
+	set(ELNT_COMMIT_HASH "git not found")
+endif()
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake.tex.in"
 	"cmake.tex"
 	@ONLY

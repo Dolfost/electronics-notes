@@ -120,6 +120,60 @@ applied voltage across the combination, but current will be constant \cite{pract
 	I_{\text{total}} = I_{\text{const}}.
 \end{gather}
 
+\section{Voltage souces}
+An \emph{ideal voltage source} is a two-terminal device that maintains a fixed
+voltage across its terminals. If a variable load is connected to an ideal
+voltage source, the source will maintain its terminal voltage regardless of
+changes in the load resistance. This means that an ideal voltage source will
+supply as much current as needed to the load in order to keep the terminal
+voltage fixed. \cite{practical_electronics}
+\begin{gather}
+	I=\frac{V}{R},\text{ \(I\) changes with \(R\), but \(V\) is fixed}. 
+\end{gather}
+Now a fishy thing with an ideal voltage source is that if the resistance goes
+to zero, the current must go to infinity. Well, in the real world, there is no
+device that can supply an infinite amount of current. \cite{practical_electronics}
+
+A real voltage source resembles an ideal voltage source with a small series
+internal resistance or source resistance \(r_s\). This internal resistance
+tends to reduce the terminal voltage, the magnitude of which depends on its
+value and the amount of current that is drawn from the source. 
+
+When a load \(R_{\text{load}}\) is attached across the source terminals,
+\(R_{\text{load}}\) and \(r_s\) are connected in series. The voltage at the
+terminal can be determined by using the voltage divider relation: \cite{practical_electronics}
+\begin{gather}
+	V_T = V_s \frac{R_{\text{load}}}{R_{\text{load}}+r_s}.
+\end{gather}
+
+An \emph{ideal current source} provides the same amount of source current \(I_s\)  at
+all times to a load, regardless of load resistance changes. This means that the
+terminal voltage will change as much as needed as the load resistance changes
+in order to keep the source current constant. \cite{practical_electronics}
+
+In the real world, current sources have a large internal shunt (parallel)
+resistance \(r_s\). This internal resistance, which is usually very large,
+tends to reduce the terminal current \(I_T\),  the magnitude of which depends
+on its value and the amount of current that is drawn from the source When the
+source terminals are open-circuited, \(I_T\) is zero. But when we connect a
+load resistance \(R_{\text{load}}\) across source terminals,
+\(R_{\text{load}}\) and \(r_s\) form and parallel resistor circuit. Using the
+current divider expression, the terminal current becomes: \cite{practical_electronics}
+\begin{gather}
+	I_T = I_s\frac{r_s}{R_{\text{load}}+r_s}.
+\end{gather}
+
+\subsection{Combining batteries}
+To \emph{increase the supply voltage}, batteries are
+placed end to end or in series. The terminal voltages of each battery add together
+to give a final supply voltage equal to the sum from the batteries. \cite[p. 67]{practical_electronics}
+
+To create a \emph{supply with added current capacity} (increased operating time),
+batteries can be placed in parallel--positive terminals are joined together, as
+are negative terminals. \cite{practical_electronics}
+
+
+
 
 
 
