@@ -172,9 +172,53 @@ To create a \emph{supply with added current capacity} (increased operating time)
 batteries can be placed in parallel--positive terminals are joined together, as
 are negative terminals. \cite{practical_electronics}
 
+\section{Kirchhoff's laws}
+Kirchhoff’s laws provide the most general method for analyzing circuits. These
+laws work for either linear (resistor, capacitors, and inductors) or nonlinear
+elements (diodes, transistors, etc.), no matter how complex the circuit gets.
+\cite{practical_electronics}
+\paragraph*{Kirchhoff's voltage law}
+The algebraic sum of the voltages around any loop of a circuit is zero:
+\begin{gather}
+	\sum_{\text{closed loop}}\Delta V = V_1+V_2+V_3+\dots+V_n = 0.
+\end{gather}
+In essence, Kirchhoff’s voltage law is a statement about the conservation of
+energy. If an electric charge starts anywhere in a circuit and is made to go
+through any loop in a circuit and back to its starting point, the net change in
+its potential is zero\footnote{For example if we had closed circuit with 5\unit{\volt}
+	battery and a resistor, Kirchhoff equation would be \(5\unit{\volt}-IR=0\), starting at
+negative battery terminal.}. \cite{practical_electronics}
+\paragraph*{Kirchhoff's current law}
+The sum of the currents that enter a junction equals the sum of the currents
+that leave the junction:
+\begin{gather}
+	\sum I_{\text{in}} = \sum I_{\text{out}}.
+\end{gather}
+Kirchhoff’s current law is a statement about the conservation of charge flow
+through a circuit: at no time are charges created or
+destroyed. \cite{practical_electronics}
 
+\paragraph*{Superposition theorem}
+The current in a branch of a linear circuit is equal to the sum of the currents
+produced by each source, with the other sources set equal to zero.
+\cite{practical_electronics}
 
+The proof of the superposition theorem follows directly from the fact that
+Kirchhoff’s laws applied to linear circuits always result in a set of linear
+equations, which can be reduced to a single linear equation in a single
+unknown. This means that an unknown branch current can thus be written as a
+linear superposition of each of the source terms with an appropriate
+coefficient. The superposition should not be applied to nonlinear circuits.
+\cite{practical_electronics}
 
+A source may be a voltage source or a current source. If the source is a
+voltage source, to set it to zero means that the points in the circuit where
+its terminals were connected must be kept at the same potential. The only way
+to do this is to replace the voltage source with a conductor, creating a short
+circuit. If the source is a current source, to set it to zero means to simply
+remove it and leave the terminals open, thus creating an open circuit. A short
+circuit causes the voltage to be zero; an open circuit causes the current to be
+zero. \cite{practical_electronics}
 
 
 \end{document}
