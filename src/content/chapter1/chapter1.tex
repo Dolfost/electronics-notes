@@ -220,5 +220,146 @@ remove it and leave the terminals open, thus creating an open circuit. A short
 circuit causes the voltage to be zero; an open circuit causes the current to be
 zero. \cite{practical_electronics}
 
+\section{Capacitors}
+Two oppositely charged parallel conducting plates separated a small distance
+apart by an insulator is called a capacitor. The
+ratio of charge on one of the plates of a capacitor to the voltage that exists
+between the plates is called \emph{capacitance}: \cite{practical_electronics}
+\begin{gather}
+	C=\frac{Q}{V}
+\end{gather}
+C is always taken to be positive, and has units of farads (abbreviated
+\(\unit{\farad}\)). \cite{practical_electronics}
+
+\subsection{Determining capacitance}
+The capacitance of a capacitor is determined by plate area \(A\) , plate
+separation \(d\), and insulating material or dielectric. If a voltage \(V\)  is
+applied between two parallel plates, an electric field equal to \(E = V/d\)
+will be produced. From Gauss’s law, each plate must contain an equal and
+opposite charge given by:
+\begin{gather}
+	Q=\varepsilon AE = \frac{\varepsilon AV}{d}
+\end{gather}
+where \(\epsilon\)  is the permittivity of the dielectric.
+Free space (vacuum) has a permittivity
+given by: \cite{practical_electronics}
+\begin{gather}
+	\varepsilon_0 = 8.85 \times 10^{-12}\unit{\farad\per\meter}
+\end{gather}
+
+The relative permittivity of a material referenced to the permittivity in
+vacuum is referred to as the \emph{dielectric constant}, which is given by:
+\begin{gather}
+	k=\frac{\varepsilon}{\epsilon_0}.
+\end{gather}
+The capacitance in terms of dielectric constant is expressed as:
+\begin{gather}
+	C = \frac{k\varepsilon_0A}{d}.
+\end{gather}
+For a \emph{multiple-plate capacitor}, we use the following expression to find the
+capacitance: \cite{practical_electronics}
+\begin{gather}
+	C = \frac{k\varepsilon_0A}{d}(n-1).
+\end{gather}
+
+\subsection{Energy in a capacitor}
+The energy stored in a capacitor is found by substituting the capacitor current
+into the generalized power law, then inserting the resulting power into the
+definition of power, and solving for \(E\) by integration.
+\cite{practical_electronics}
+\begin{gather}
+	E_{\text{cap}} = \frac{1}{2}CV^2.
+\end{gather}
+\subsection{Capacitors in parallel}
+When capacitors are placed in parallel, their capacitances add, just like
+resistors in series:
+\begin{gather}
+	C_{\text{tot}} = C_1 + C_2+\dots+C_n.
+\end{gather}
+It’s important to note that the largest voltage that can be applied safely to a
+group of capacitors in parallel is limited to the volt- age rating of the
+capacitor with the lowest voltage rating. \cite{practical_electronics}
+\subsection{Capacitors in series}
+When two or more capacitors are connected in series, the total capacitance is
+less than that of the smallest capacitor in the group. The equivalent
+capacitance is similar to resistors in parallel:
+\begin{gather}
+	C_{\text{tot}} = \frac{1}{C_1} + \frac{1}{C_2}+\dots+\frac{1}{C_n}.
+\end{gather}
+Capacitors may be connected in series to enable the group to withstand a larger
+voltage than any individual capacitor is rated to withstand (the maximum
+voltage ratings add). \cite{practical_electronics}
+
+\subsection{Capacitors and AC}
+Everything that was discussed about capacitors in dc circuits also applies in
+ac circuits, with one major exception. While a capacitor in a dc circuit will
+block current flow (except during brief periods of charging and discharging), a
+capacitor in an ac circuit will either pass or limit current flow, depending on
+frequency. Unlike a resistor that converts current energy into heat to reduce
+current flow, a capacitor stores electrical energy and returns it to the
+circuit. \cite{practical_electronics}
+
+\subsection{Capacitive Reactance}
+When the effect of capacitance and frequency are considered together, they
+form a quantity similar to resistance. However, since no actual heat is being
+generated, the effect is termed capacitive reactance. The unit for reactance
+is the ohm, just as for resistors, and the formula for calculating the
+reactance of a capacitor at a particular frequency is given by:
+\begin{gather}
+	X_C=\frac{1}{2\pi fC}=\frac{1}{\omega C} \tag{Capacitive reactance}
+\end{gather} 
+where \(X_C\) is an reactance in ohms, \(f\) is a frequency in \unit{\hertz}, C
+is the capacitance in farads. Often omega \(\omega\) used in place of \(2\pi
+f\), where \(\omega\) is called the \emph{angular frequence}.
+\cite{practical_electronics}
+
+It’s important to note that even though the unit of reactance is the ohm, there
+is no power dissipated in reactance. The energy stored in the capacitor during
+one portion of the cycle is simply returned to the circuit in the next. In
+other words, over a complete cycle, the average power is zero.
+\cite{practical_electronics}
+
+\subsection{Capacitive divider}
+\begin{wrapfigure}{l}{.3\textwidth}
+	\begin{center}
+		\includegraphics[width=\linewidth]{capacitive_divider.drawio.png}
+	\end{center}
+	\caption{Capacitive divider}\label{fig:capacitive_divider}
+\end{wrapfigure}
+Capacitive dividers can be used with ac input signals or even dc, since the
+capacitors will rapidly reach a steady state. The formula for determining the
+ac output voltage of a capacitive divider is different from the resistive
+divider, because the series element, \(C_1\) is in the numerator, not \(C_2\), the
+shunt element. See fig. \ref{fig:capacitive_divider}.
+\begin{gather}
+	V_{\text{OUT}} = \frac{C_1}{C_1+C_2}V_{\text{IN}}.
+\end{gather}
+
+Note that the output voltage is independent of the input frequency. However, if
+the reactance of the capacitors is not large at the frequency of interest
+(i.e., the capacitance is not large enough), the output current capability
+will be very low. \cite{practical_electronics}
+
+\subsection{Quality Factor}
+Components that store energy, like a capacitor, may be compared in terms of
+quality factor \(Q\), also known as the merit. The \(Q\)  of any such component
+is the ratio of its ability to store energy to the sum total of all energy
+losses within the component. Since reactance is associated with stored energy
+and resistance is associated with energy loss, we can express the quality
+factor as:
+\begin{gather}
+	Q=\frac{\text{Reactance}}{\text{Resistance}}=\frac{X}{R}.
+\end{gather}
+\(Q\)  has no units. When considering a capacitor, the reactance (in ohms) is
+simply the capacitive reactance \(X=X_C\).  \(R\) is the sum of all resistances
+associated with the energy losses in the component (in ohms). The \(Q\)  of
+capacitors is ordinarily high. Good-quality ceramic capacitors and mica
+capacitors may have \(Q\)  values of 1200 or more. Small ceramic trimmer
+capacitors may have \(Q\) values too small to ignore in some applica tions.
+Microwave capacitors can have poor \(Q\)  values, 10 or less at
+10\unit{\giga\hertz} or higher. \cite{practical_electronics}
+
+
+
 
 \end{document}
