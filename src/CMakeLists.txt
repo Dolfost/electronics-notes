@@ -45,13 +45,13 @@ set(TEXLOGFILTER_OPTIONS
 
 set(LOG_COMMENT "Trimming logs")
 if(NOT TEXLOGFILTER_FOUND)
-	add_custom_target(report_log
+	add_custom_target(pdf_log
 		COMMAND ${CMAKE_COMMAND} -E echo 
 			"texlogfilter were not found."
 		COMMENT ${LOG_COMMENT}
 	)
 else()
-	add_custom_target(report_log
+	add_custom_target(pdf_log
 		COMMAND ${TEXLOGFILTER_EXECUTABLE}
 			${CMAKE_CURRENT_BINARY_DIR}/document.log 
 			${TEXLOGFILTER_OPTIONS}
@@ -60,7 +60,7 @@ else()
 	set(SILENT_OPTIONS "-silent")
 endif()
 
-add_custom_target(report_pdf
+add_custom_target(pdf
 	COMMAND ${LATEXMK_EXECUTABLE} ${LRT_DOCUMENT}
 		-r "${CMAKE_CURRENT_BINARY_DIR}/latexmkrc"
 		"${SILENT_OPTIONS}" "${LATEXMK_OPTIONS}"
@@ -79,7 +79,7 @@ if(TEXLOGFILTER_FOUND)
 	)
 endif()
 
-add_custom_target(report_pdf_clean 
+add_custom_target(pdf_clean 
 	COMMAND ${LATEXMK_EXECUTABLE} -c document.tex
 	-r ${CMAKE_CURRENT_BINARY_DIR}/latexmkrc
 	WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
