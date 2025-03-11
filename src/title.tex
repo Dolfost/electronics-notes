@@ -1,60 +1,21 @@
 %! TeX root = ../document.tex
 
-\newlength{\rightshift}
-\setlength{\rightshift}{35pt}
-
-\thispagestyle{empty}
-
-{\sffamily
-\begin{Center}
-	{\LARGE{}МІНІСТЕРСТВО НАУКИ ТА ОСВІТИ УКРАЇНИ\\
-	\university{}\\}
-	{\Large\faculty{}\\\department{}}
-\end{Center}
-
-\vspace*{\fill}
-
-\begin{Center}
-	\includegraphics[width=.4\textwidth]{resources/images/pm}\\
-\end{Center}
-
-\vspace*{\fill}
-
-\begin{Center}
-	\Large
-	\enquote{\subjectname}\\
-	\jobtitle{} \prodnumber{}\\
-	\proddate{}\\
-\end{Center}
-
-\vspace*{\fill}
-
-\begin{adjustwidth}{\textwidth/2+\rightshift}{0pt}
-	\begin{FlushLeft}
+\begin{titlepage}
+	\vspace*{\fill}
+	\begin{center}
+		\Huge
+		Electronics notes\\
+		\vspace{1cm}
+		\Large
+		February 6, 2025 --- \today\\
 		\large
-		Виконав:\\
-		студент №\studentnumber{} групи \groupnumber{}\\
-		\studentname{}\\
-	\end{FlushLeft}
-\end{adjustwidth}
-
-\vspace{10pt}
-
-\begin{adjustwidth}{\textwidth/2+\rightshift}{0pt}
-	\begin{FlushLeft}
-		\large
-		Прийняв:\\
-		\teachername{}
-	\end{FlushLeft}
-\end{adjustwidth}
-
-\vspace*{\fill}
-
-\begin{Center}
-	Київ \the\year{}
-\end{Center}
-}
-
-\pagebreak
-\hypertarget{tocLink}{{\sffamily\tableofcontents}}
-\pagebreak
+		Vladyslav Rehan\\
+		\vspace*{4cm}
+		\includegraphics[width=.5\textwidth]{\lrtresources/images/title.drawio}
+		\vspace*{5cm}
+	\end{center}
+	\vspace*{\fill}
+	\begin{raggedleft}
+		\footnotesize commit: \href{\elnthomepage}{\texttt{\elntcommithash}}
+	\end{raggedleft}
+\end{titlepage}
