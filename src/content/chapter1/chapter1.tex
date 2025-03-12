@@ -400,5 +400,75 @@ According to Faraday’s law of induction, the only time that our loop can self
 ­inflict is when the magnetic field grows or shrinks in strength (as a result
 of an increase or decrease in current). \cite{practical_electronics}
 
+\subsection{Energy Within an Inductor}
+Energy within inductor can be calculated as 
+\begin{gather}
+	E_L = \frac{1}{2}LI^2.
+\end{gather}
+Note that in a real inductor a small portion of energy is lost to resistive
+heating through the inductor’s internal resistance.
+\cite{practical_electronics}
+
+\subsection{Inductorns in Series and Paraller}
+When two or more inductors are connected in series, the total inductance is
+equal to the sum of the individual inductances, provided the coils are
+sufficiently separated, so that coils are not in the magnetic field of one
+another:
+\begin{gather}
+	L_{\text{tot}} = L_1+L_2+L_3+\dots+L_n. \tag{Inductors in series}
+\end{gather}
+If inductors are connected in parallel, and if the coils are separated
+sufficiently, the total inductance is given by: \cite{practical_electronics}
+\begin{gather}
+	\frac{1}{L_{\text{tot}}} =
+	\frac{1}{L_1}+\frac{1}{L_2}+\frac{1}{L_3}+\dots+\frac{1}{L_n}. \tag{Inductors
+	in parallel}
+\end{gather}
+
+\subsection{Alternating Current and Inductors}
+When an alternating voltage is applied to an ideal inductance, the current that
+flows through the inductor is said to lag the applied voltage by \(90^\circ\) .
+Or if you like, the applied voltage leads the current by \(90^\circ\). This is
+exactly the opposite of what we saw with capacitors under ac. The primary cause
+for the current lag in an inductor is due to the reverse voltage generated in
+the inductance. The amplitude of the reverse voltage is proportional to the
+rate at which the current changes. \cite{practical_electronics}
+
+\subsection{Inductive Reactance}
+The amplitude of alternating current in an inductor is inversely proportional
+to the applied frequency. Since the reverse voltage is directly proportional to
+inductance for a given rate of current change, the current is inversely
+proportional to inductance for a given applied voltage and frequency. The
+combined effect of inductance and frequency is called inductive reactance. Like
+capacitive reactance, inductive reactance is expressed in ohms. The inductive
+reactance is given by the following formula:
+\begin{gather}
+	X_L = 2\pi fL. \tag{Inductive reactance}
+\end{gather}
+As \(f\)  goes to infinity, \(X_L\) goes to infinity, and the inductor acts
+like an open circuit (inductors do not like to pass high-frequency signals).
+However, as \(f\) goes to 0, the \(X_L\) goes to zero (inductors have an easier
+time passing low-frequency signals and ideally present no \enquote{resistance}
+to dc signals). \cite{practical_electronics}
+
+\subsection{Inductive Divider}
+\begin{wrapfigure}{l}{.3\textwidth}
+	\begin{center}
+		\includegraphics[width=\linewidth]{inductive_divider.drawio.png}
+	\end{center}
+	\caption{Inductive divider}\label{fig:inductive_divider}
+\end{wrapfigure}
+Inductive dividers can be used with ac input signals. A dc input voltage would
+split according to the relative resistances of the two inductors by using the
+resistive voltage divider. The formula for determining the ac output voltage of
+an inductive divider (provided the inductors are separated -- that is, not
+wound on the same core and have no mutual inductance) is: \cite{practical_electronics}
+\begin{gather}
+	V_{\text{out}} = \frac{L_2}{L_1+L_2}V_{\text{in}}. \tag{Inductive divider on
+	fig. \ref{fig:inductive_divider}}
+\end{gather}
+
+
+
 
 \end{document}
