@@ -452,7 +452,7 @@ time passing low-frequency signals and ideally present no \enquote{resistance}
 to dc signals). \cite{practical_electronics}
 
 \subsection{Inductive Divider}
-\begin{wrapfigure}{l}{.3\textwidth}
+\begin{wrapfigure}[8]{l}{.3\textwidth}
 	\begin{center}
 		\includegraphics[width=\linewidth]{inductive_divider.drawio.png}
 	\end{center}
@@ -467,8 +467,13 @@ wound on the same core and have no mutual inductance) is: \cite{practical_electr
 	V_{\text{out}} = \frac{L_2}{L_1+L_2}V_{\text{in}}. \tag{Inductive divider on
 	fig. \ref{fig:inductive_divider}}
 \end{gather}
+\\
 
 \section{Resonant Circuits}
+In electrical engineering, \emph{impedance} is the opposition to alternating
+current presented by the combined effect of resistance and reactance in a
+circuit. \cite{slurzberg1950essentials}
+
 When an LC circuit is driven by a sinusoidal voltage source at a special
 frequency called the resonant frequency, an interesting phenomenon occurs. For
 example, if you drive a series LC circuit at its resonant angular frequency
@@ -539,6 +544,19 @@ A negative sign indicates a decrease in power. If you increase the power by 4,
 you can avoid using the decibels formula and simply associate such an increase
 with doubling two times (around 6\unit{\deci\bel}).
 \cite{practical_electronics}
+
+\section{Filters}
+By combining resistors, capacitors, and inductors in special ways, you can
+design networks that are capable of passing certain frequencies of signals
+while rejecting others. \cite[sec. 2.23]{practical_electronics}
+\begin{description}
+	\item[Low-Pass Filter] passes low frequencies but rejects high frequencies.
+	\item[High-Pass Filter] passes high frequencies but rejects low frequencies.
+	\item[Bandpass Filter] acts to pass a narrow range of frequencies while
+		attenuating all other frequencies.
+	\item[Notch Filter] acts to pass a wide range of frequencies, while
+		attenuating a narrow band of frequencies.
+\end{description}
 
 
 
