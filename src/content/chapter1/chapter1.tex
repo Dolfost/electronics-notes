@@ -468,6 +468,78 @@ wound on the same core and have no mutual inductance) is: \cite{practical_electr
 	fig. \ref{fig:inductive_divider}}
 \end{gather}
 
+\section{Resonant Circuits}
+When an LC circuit is driven by a sinusoidal voltage source at a special
+frequency called the resonant frequency, an interesting phenomenon occurs. For
+example, if you drive a series LC circuit at its resonant angular frequency
+\(\omega_0 =1/LC\), or equivalently its resonant frequency \(f_0 =
+1/(2\pi\sqrt{LC})\), the effective impedance across the LC network goes to
+zero. In effect, the LC network acts like a short. This means that the sourced
+current flow will be at a maximum. Ideally, it will go to infinity, but in
+reality it is limited by internal resistances of all the components in the
+circuit. \cite{practical_electronics}
+
+Intuitively, you can imagine that the voltage across the capacitor and the
+voltage across the inductor are exactly equal but opposite in phase at
+resonance, within the LC series circuit. This means the effective voltage drop
+across the series pair is zero; therefore, the impedance across the pair must
+also be zero. \cite{practical_electronics}
+
+Resonance occurs in a parallel LC circuit as well. The angular resonant
+frequency is the same resonant frequency expression for the series LC circuit;
+however, the circuit behavior is exactly opposite. Instead of the impedance
+going to zero and the current going to infinity at resonance, the impedance
+goes to infinity while the current goes to zero. In essence, the parallel LC
+network acts like an open circuit. Of course, in reality, there is always some
+internal resistance and parasitic capacitance and inductance within the circuit
+that prevent this from occurring. \cite{practical_electronics}
+
+\section{Decibels}
+In electronics, often occur situations where you will need to compare the
+relative amplitudes or the relative powers between two signals. If an amplifier
+has an output voltage that is 10 times the input voltage (or vice-versa), ratio
+can be setup:
+\begin{gather}
+	\frac{V_{\text{out}}}{V_{\text{in}}} = \frac{10}{1} = 10, \tag{gain}\\
+	\frac{V_{\text{out}}}{V_{\text{in}}} = \frac{1}{10} = 0.1. \tag{attenuation}
+\end{gather} 
+A bel is defined as the logarithm of a power ratio. It gives us a
+way to compare power levels with each other and with some reference power. The
+bel is defined as:
+\begin{gather}
+	\unit{\bel} = \log\left(\frac{P_1}{P_0}\right).
+\end{gather}
+where \(P_0\) is the reference power and \(P_1\) is the power you are comparing
+with the reference power. The more practical unit is \unit{\deci\bel}:
+\cite{practical_electronics}
+\begin{gather}
+	\unit{\deci\bel} = 10\log\left(\frac{P_1}{P_0}\right).
+\end{gather}
+
+When \emph{doubling power}, the final power is always 2 times the initial (or
+reference) power --- it ­ doesn’t make a difference if you are going from 1 to
+\unit{\watt}, 40 to 80 \unit{\watt}, or 500 to 1000 \unit{\watt}, the ratio is
+always 2. In decibels, a power ratio of 2 is repre sented as:
+\begin{gather}
+	\unit{\deci\bel} = 10\log\left(2\right) = 3.01\unit{\deci\bel}.
+\end{gather}
+There is a 3.01\unit{\deci\bel} gain if the output power is twice the input
+power. Usually, people don’t care about the .01 fraction and simply refer to
+the power doubling as a 3\unit{\deci\bel} increase in power.
+\cite{practical_electronics}
+
+When the \emph{power is cut in half}, the ratio is always 0.5. Again, it
+doesn’t matter if you’re going from 1000 to 500\unit{\watt}, 80 to
+40\unit{\watt}, or 2 to 1\unit{\watt}, the ratio is still 0.5. In decibels, a
+power ratio of 0.5 is represented as:
+\begin{gather}
+	\unit{\deci\bel} = 10\log\left(0.5\right) = -3.01\unit{\deci\bel}.
+\end{gather}
+A negative sign indicates a decrease in power. If you increase the power by 4,
+you can avoid using the decibels formula and simply associate such an increase
+with doubling two times (around 6\unit{\deci\bel}).
+\cite{practical_electronics}
+
 
 
 
