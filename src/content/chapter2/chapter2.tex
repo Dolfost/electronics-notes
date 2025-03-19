@@ -140,5 +140,93 @@ Batteries are classified into 2 types:
 \end{sidewaystable}
 
 \subsubsection{Supercapacitor}
+Supercapacitor is a cross between a capacitor and a battery. It resembles a
+regular capacitor, but uses special electrodes and some electrolytes. There are
+three kinds of electrode material found in a supercapacitor:
+high-surface-area-activated carbons, metal oxide, and conducting polymers. The
+one using high-surface-area-activated carbons is the most economical to
+manufacture. \cite{practical_electronics}
+
+Limitations include an inability to use the full energy spectrum --- depending
+on the application, not all energy is available. A supercapacitor has low
+energy density, typically holding \(1/5\)  to \(1/10\) the energy of an
+electrochemical battery. Cells have low voltages --- serial connections are
+needed to obtain higher voltages. Voltage balancing is required if more than
+three capacitors are connected in series. Furthermore, the self-discharge is
+considerably higher than that of an electrochemical battery. 
+\cite{practical_electronics}
+
+Advantages include a virtually unlimited life cycle --- supercapacitors are not
+subject to the wear and aging experienced by electrochemical batteries. Also,
+low impedance can enhance pulsed current demands on a battery when placed in
+parallel with the battery. Supercapacitors experience rapid charging --- with
+low-impedance versions reaching full charge within seconds. The charge method
+is simple --- the voltage-limiting circuit compensates for self-discharge.
+\cite{practical_electronics}
+
+\subsubsection{Battery Capacity}
+Batteries are given a capacity rating that indicates how much electrical energy
+they are capable of delivering over a period of time. The capacity rating is
+specified in terms of ampere-hours (\unit{\ampere\hour}) and millampere-hours
+(\unit{\milli\ampere\hour}). \cite{practical_electronics}
+
+\subsubsection{C Rating}
+The charge and discharge currents of a battery are measured in capacity rating
+or C rating. The capacity represents the efficiency of a battery to store
+energy and its ability to transfer this energy to a load. Most portable
+batteries, with the exception of lead-acid, are rated at 1C. A discharge rate
+of 1C draws a current equal to the rated capacity that takes one hour. For
+example, a battery rated at 1000 \unit{\milli\ampere\hour} provides 1000
+\unit{\milli\ampere} for 1 hour if discharged at 1C rate. The same battery at
+0.5C provides 500 \unit{\milli\ampere} for 2 hours. At 2C, the same battery
+delivers 2000 \unit{\milli\ampere} for 30 minutes. 1C is often referred to as a
+1-hour discharge; 0.5C would be 2 hours, and 0.1C would be a 10-hour discharge.
+The discrepancy in C rates between different batteries is largely dependent on
+the internal resistance. \cite{practical_electronics}
+
+\subsubsection{Internal Voltage Drop}
+\begin{wraptable}{r}{.5\linewidth}
+	\begin{center}
+		\begin{tabular}{ll}
+			\toprule 
+			Battery & Resistance\\
+			\midrule
+			9\unit{\volt} zinc carbon & 35\unit{\ohm}\\
+			9\unit{\volt} lithium & 16 to 18\unit{\ohm}\\
+			9\unit{\volt} alkaline & 1 to 2\unit{\ohm}\\
+			AA alkaline & 0.15\unit{\ohm} (0.30\unit{\ohm} at 50\%)\\
+			AA NiMH & 0.02\unit{\ohm} (0.04\unit{\ohm} at 50\%)\\
+			D alkaline & 0.1\unit{\ohm}\\
+			D NiCad & 0.009\unit{\ohm}\\
+			D SLA & 0.006\unit{\ohm}\\
+			AC13 zinc air & 5\unit{\ohm}\\
+			76 silver & 10\unit{\ohm}\\
+			675 mercury & 10\unit{\ohm}\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\caption{Typical internal resistance for various batteries \cite[p. 290]{practical_electronics}}
+\end{wraptable}
+Batteries have an internal resistance that is a result of the imperfect
+conducting elements that make up the battery (resistance in electrodes and
+electrolytes). Though the internal resistance may appear low (around
+0.1\unit{\ohm} for an AA alkaline battery, or 1 to 2\unit{\ohm} for a
+9\unit{\volt} alkaline battery), it can cause a noticeable drop in output
+voltage if a low-resistance (high-current) load is attached to it. Without a
+load, we can measure the open-circuit voltage of a battery. This voltage is
+essentially equal to the battery's rated nominal voltage --- the voltmeter has
+such a high input resistance that it draws practically no current, so there is
+no appreciable voltage drop. However, if we attach a load to the battery, the
+output terminal voltage of the battery drops. By treating the internal
+resistance Rin and the load resistance Rload as a voltage divider, you can
+calculate the true output voltage present across the load.
+\cite{practical_electronics}
+
+Batteries with large internal resistances show poor performance in supplying
+high current pulses. Internal resistance also increases as the battery
+discharges. \cite{practical_electronics}
+
+\subsection{Switches}
+
 
 \end{document}
