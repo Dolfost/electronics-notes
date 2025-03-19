@@ -14,7 +14,7 @@ multiconductor transmission line. Connectors, such as plugs, jacks, and
 adapters, are used as mating fasteners to join wires and cable with other
 electrical devices. \cite{practical_electronics}
 
-\paragraph{Skin Effect}
+\subsubsection{Skin Effect}
 The movement of electrons toward the surface of a wire under high-frequency
 conditions is called the \emph{skin effect}. At low frequencies, the skin effect does
 not have a large effect on the conductivity (or resistance) of the wire.
@@ -40,6 +40,7 @@ Batteries are classified into 2 types:
 
 \begin{sidewaystable}
 	\begin{center}
+		\small
 		\begin{tabular}{p{.09\textheight}p{.07\textheight}p{.06\textheight}p{.07\textheight}p{.12\textheight}p{.05\textheight}p{.22\textheight}p{.2\textheight}}
 			\toprule 
 			Type\newline (Chemistry)  & Common\newline names & Voltage
@@ -49,34 +50,95 @@ Batteries are classified into 2 types:
 			Carbon-zinc & Standard-duty & 1.5 & Medium & Medium & Low & Low cost,
 			various sizes, but terminal voltage drops steadily during cell life &
 			Radios, toys, and general-purpose electrical equipment\\
+			\midrule
 			Zinc-chloride & Heavy-duty & 1.5 & Low & Medium to high & Low to medium &
 			Low cost at higher discharge rates and at lower temperature; terminal
 			voltage still drops & Motor-driven  portable devices, clocks, ­ remote
 			controls\\
+			\midrule
 			Alkaline zinc-manganese dioxide & Alkaline & 1.5 & Very low & High &
 			Medium to high & Better for high continuous or pulsed loads and at low
 			temperatures, but terminal voltage drops & Photoflash units, battery
 			shavers, digital cameras, handheld transceivers, portable CD players,
 			etc.\\
+			\midrule
 			Lithium-manganese dioxide & Lithium & 3.0 & Low & Medium to high & High &
 			High energy density, very low self-discharge rate (excellent shelf-life),
 			good temperature tolerance & Watches, calculators, cameras (digital and
 			film), DMMs, and other test instruments\\
+			\midrule
 			Zinc-mercuric oxide & Mercury cell & 1.35 & Low & Low & High & High
 			energy density (compact), very flat discharge curve, good at higher
 			temperatures & Calculators, pagers hearing aids, watches, test intruments\\
+			\midrule
 			Zinc-silver oxide & Silver oxide cell & 1.5 & Low & Low & High & Very
 			high energy density (very compact), very flat discharge curve,
 			reasonable at lower temperatures & Calculators, pagers, hearing aids,
 			watches test instruments\\
+			\midrule
 			Zinc-oxygen & Zinc air cell & 1.45 & Medium & Low & Medium & High energy
 			density, very lightweight, flat discharge curve, but must have access to
 			air & Hearing aids and pagers\\
 			\bottomrule
 		\end{tabular}
 	\end{center}
-	\caption{Primary Battery Comparison Chart \cite[p. 278]{practical_electronics}}
+	\caption{Primary Battery Comparison \cite[p. 278]{practical_electronics}}
 \end{sidewaystable}
 
+\begin{sidewaystable}
+	\begin{center}
+		\small
+		\begin{tabular}{p{.06\textheight}p{.06\textheight}p{.05\textheight}p{.05\textheight}p{.06\textheight}p{.09\textheight}p{.05\textheight}p{.22\textheight}p{.2\textheight}}
+			\toprule 
+			Type & Voltage (\(\approx\)) & Energy density
+			(\unit{\watt\per\kilogram}) & Cycle life & Charge time & Max. discharge
+			rate & Cost & Pros and Cons & Typical applications\\
+			\midrule
+			Sealed\newline led-acid & 2.0 & Low (30) & Long (shallow cycles) &
+			8–1\unit{\hour} & Medium\newline (0.2C) & Low & Low cost, low
+			self-discharge, happy float charging, but prefers shallow charging &
+			Emergency lighting, alarm systems solar power systems, wheelchairs,
+			etc.\\
+			\midrule
+			Rechargeable alkaline-manganese & 1.5 & High (75 initial) & Short to
+			medium & 2–6\unit{\hour} (pulsed) & Medium (0.3 C) & Low & Low cost, low
+			self-discharge, prefer shallow cycling, no memory effect but short cycle
+			life & Portable emergency lighting, toys, portable radios, CD players,
+			test instruments, etc.\\
+			\midrule
+			NiCad & 1.2 & Medium (40–60) & Long (deep cycles) & 14–16\unit{\hour}
+			(0.1C) or <2\unit{\hour} with care (1C) & High (>2C) & Medium & Prefer
+			deep cycling, good pulse capacity, but have memory effect, fairly high
+			self-discharge rate, environmentally unfriendly & Portable tools and
+			appliances, model cars and boats, data loggers, camcorders, portable
+			transceivers, and test equipment\\
+			\midrule
+			NiMH & 1.2 & High (60–80) & Medium & 2–4\unit{\hour} & Medium (0.2–0.5C)
+					 & Medium & Very compact energy source, but have some memory effect,
+			high self-discharge rate & Remote control ­ vehicles, cordless ­ mobile
+			phones, personal DVD and CD players, power tools\\ 
+			\midrule
+			NiZn & 1.65 & High
+			(>170) & Medium to high & 1–2\unit{\hour} & --- & Medium & Low cost,
+			environmentally green, twice ­ energy density of Ni­ Ca & Exceptional
+			performance, no memory, long shelf-life\\
+			\midrule
+			NiFe & 1.4 & High (>200)  & Extr. long & Long & --- & Low & High
+			cycle life, incredibly long life up to 80 years, environmentally friendly
+					 & Forklifts and other, similar SLA-like applications, but where
+			longevity is important\\ 
+			\midrule
+			Li-ion/LiPo & 3.6 & Very high (>100) & Medium &
+			3–4\unit{\hour} (1–0.03C) &  Med/high (<1C) & High & Very compact, low
+			maintenance, low self-discharge, but needs great care with charging &
+			Compact cell phones and notebook PCs, digital cameras, and similar very
+			small ­ portable devie\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\caption{Rechargeable Battery Comparison \cite[p. 284]{practical_electronics}}
+\end{sidewaystable}
+
+\subsubsection{Supercapacitor}
 
 \end{document}
