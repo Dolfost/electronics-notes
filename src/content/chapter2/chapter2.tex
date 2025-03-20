@@ -185,7 +185,7 @@ The discrepancy in C rates between different batteries is largely dependent on
 the internal resistance. \cite{practical_electronics}
 
 \subsubsection{Internal Voltage Drop}
-\begin{wraptable}{r}{.5\linewidth}
+\begin{wraptable}[23]{r}{.5\linewidth}
 	\begin{center}
 		\begin{tabular}{ll}
 			\toprule 
@@ -227,6 +227,92 @@ high current pulses. Internal resistance also increases as the battery
 discharges. \cite{practical_electronics}
 
 \subsection{Switches}
+A switch is a mechanical device that interrupts or diverts electric current
+flow within a circuit. \cite{practical_electronics}
 
+A switch is characterized by its number of \emph{poles} (\(P\)) and by its
+number of \emph{throws} (\(T\)). A pole represents a contact, meanwhile throw
+represents the particular contact-to-contact connection. When specifying the
+number of poles and the number of throws, a convention must be followed: When
+the number of poles or number of throws equals 1, the letter S, which stands
+for \enquote{single} is used. When the number of poles or number of throws
+equals 2, the letter D, which stands for \enquote{double} is used. When the
+number of poles or number of throws exceeds 2, integers such as 3, 4, or 5 are
+used. Examples: SPST, SPDT, DPST, DPDT, DP3T, and 3P6T.
+\cite{practical_electronics}
+
+Two important features to note about switches include whether a switch has ­
+momentary contact action and whether the switch has a center-off position.
+Momentary-contact switches, which include mainly pushbutton switches, are used
+when it is necessary to only briefly open or close a connection.
+Momentary-contact switches come in either normally closed (NC) or normally open
+(NO) forms. A normally closed pushbutton switch acts as a closed circuit
+(passes current) when left­ untouched. A normally open pushbutton switch acts
+as an open circuit (broken circuit) when left untouched. Center-off position
+switches, which are seen in diverter switches, have an additional \enquote{off}
+position located between the two \enquote{on} positions.
+\cite{practical_electronics}
+ 
+\subsection{Relays}
+\emph{Relays} are electrically actuated switches. The three basic kinds of
+relays include mechanical relays, reed relays, and solid state relays. For a
+typical mechanical relay, a current sent through a coil magnet acts to pull a
+flexible, spring-loaded conductive plate from one switch contact to another.
+Reed relays consist of a pair of reeds (thin, flexible metal strips) that
+spring together whenever a current is sent through an encapsulating wire coil.
+A solid-state relay is a device that can be made to switch states by applying
+external voltages across n-type and p-type semiconductive junctions. In
+general, mechanical relays are designed for high currents (typically 2 to
+15\unit{\ampere}) and relatively slow switching (typically 10 to
+100\unit{\milli\second}). Reed relays are designed for moderate currents
+(typically 500\unit{\milli\ampere} to 1\unit{\ampere} and moderately fast
+switching (0.2 to 2\unit{\milli\second}). Solid-state relays, on the other
+hand, come with a wide range of current ratings (a few microamps for
+low-powered packages up to 100\unit{\ampere} for high-power packages) and have
+extremely fast switching speeds (typically 1 to 100\unit{\nano\second}). Some
+limitations of both reed relays and solid-state relays include limited
+switching arrangements (type of switch section) and a tendency to become
+damaged by surges in power. \cite{practical_electronics}
+
+\subsection{Resistors}
+Resistors perform two basic functions in electronics: to limit current flow and
+to set voltage levels within a circuit.
+
+\subsubsection{Voltage Rating}
+This is the maximum value of dc or RMS voltage that can be imposed across a ­
+resistor at specified ambient temperatures. The voltage rating is related to
+the power \(V=\sqrt{P\times R}\), where \(V\) is the voltage rating (in volts),
+\(P\) is the power rating (in watts), and \(R\)  is the resistance (in ohms).
+\cite{practical_electronics}
+
+\subsubsection{Tolerance}
+This is expressed as the deviation (in percent) in resistance from the nominal
+value, measured at 2\unit{\celsius} with no load applied. Typical resistor
+tolerances are 1 percent 2 percent, 5 percent, 10 percent, and 20 percent.
+Precision resistors, such as precision wirewounds, are made with tolerances as
+tight as \pm 0.005 percent. \cite{practical_electronics}
+
+\subsubsection{Power Rating}
+Resistors must be operated within specified temperature limits to avoid
+permanent damage to the materials. The temperature limit is defined in terms of
+the maximum power, called the power rating, and a derating curve that is
+provided by the resistor manufacturers. The power rating of a resistor is the
+maximum power in watts that the resistor can safely dissipate as heat, usually
+specified at +25\unit{\celsius}. \cite{practical_electronics}
+
+\subsubsection{Temperature Coefficient of Resistance (TCR or TC)}
+This tells the amount of resistance change that occurs when the temperature of
+a resistor changes. TC values are typically expressed as parts per million
+(ppm) for each degree centigrade change from some nominal temperature-usually
+room temperature (25\unit{\celsius}). \cite{practical_electronics}
+
+So a resistor with a TC of 100 ppm will change 0.1 percent in resistance over a
+10\unit{\celsius} change, and will change 1 percent over a 100\unit{\celsius}
+change (provided the temperature change is within the resistor’s rated
+temperature range, e.g., -55 to +145\unit{\celsius}, measured at
+25\unit{\celsius} room temperature). A positive TC means an increase in
+resistance with increasing temperature, while a negative TC indicates a
+decreasing resistance with an increase in temperature.
+\cite{practical_electronics}
 
 \end{document}
