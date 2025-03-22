@@ -315,4 +315,176 @@ resistance with increasing temperature, while a negative TC indicates a
 decreasing resistance with an increase in temperature.
 \cite{practical_electronics}
 
+\subsubsection{Frequency Response}
+It’s possible for a resistor to perform like an R/C circuit, a filter, or an
+inductor. The primary cause of these inductive and capacitive effects results
+from imperfect interior layout of the resistive element as well as the
+resistor’s leads. In spiraled and wirewound ­ resistors, these inductive and
+capacitive reactances are created by the loops and spaces formed by the spirals
+or turns of wire. In pulse applications, these reactive distortions result in a
+poor replication of the input. It is probable that a 20\unit{\nano\second}
+pulse will be completely missed by a wirewound resistor, while a foil resistor,
+due to its superior design, achieves full replication in the time allotted. As
+the frequency increases, inductive reactance becomes more prevalent.
+\cite{practical_electronics}
+
+The most stable resistors for high-frequency opertions are film resistors. The
+impedance for film resistors remains constant until around
+100\unit{\mega\hertz} and then decreases at higher frequencies. In general, a
+resistor with a smaller diameter will have better frequency response. Most
+high-frequency resistors have a length-to-diameter ratio between 4:1 and 10:1.
+Manufacturers often supply data sheets that show the frequency response of
+their resistors. Impedance ­ analyzers can also aid in modeling a resistor’s
+frequency response. \cite{practical_electronics}
+
+\subsubsection{Noise}
+Resistors exhibit electrical noise in the form of small ac voltage fluctuations
+when dc voltage is applied. Noise is extremely difficult to measure accurately
+and ­ doesn’t affect the value of the resistor but can have a devastating
+effect on low-level signals, digital amplifiers, hig-gain amplifiers, and
+other applications. Noise in a resistor is a function of the applied voltage,
+physical dimensions, and materials. \cite{practical_electronics}
+
+There are three main types of resistor noise: \cite{practical_electronics}
+\begin{description}
+	\item[Johnson (thermal) noise]  Temperature-dependent thermal noise. Thermal
+		noise is also called \enquote{white noise} because the noise level is the
+		same at all frequencies. The magnitude of thermal noise,
+		\(V_{\text{RMS}}\), is dependent on the resistance value and the
+		temperature of the resistance due to thermal agitation:
+		\begin{gather}
+			V_{\text{RMS}} = \sqrt{4kRT\Delta f},
+		\end{gather}
+		where \(V_{\text{RMS}}\) is the root-mean-square value of the noise voltage
+		(in volts), \(K\)  is Boltzmann’s constant (\(1.38 ×
+		10-23\unit{\joule\per\kelvin}\)), \(R\)  is the resistance (in ohms), \(T\)
+		is the temperature (in Kelvin), and \(\Delta f\)  is the bandwidth (in
+		hertz) over which the noise energy is measured. For resistors, the thermal
+		noise is equivalent for equal valued resistors, regardless of material
+		type. The only way to reduce thermal noise is to reduce the resistance
+		value.
+	\item[Current noise] Varies inversely with frequency and is a function of the
+		current flowing through the resistor and the value of the resistor.
+		The current noise magnitude is usually expressed by a noise index given as
+		the ratio of the root-mean-square current noise voltage (\(V_{\text{RMS}}\) ) over one
+		decade bandwidth to the average voltage caused by a specified constant
+		current passed through the resistor at a specified hot-spot
+		temperature.
+		\begin{align}
+			\mathrm{NI} = 20\log_{10}\left(\frac{\text{Noise voltage}}{\text{dc voltage}}\right), &&
+			V_{\text{RMS}} = V_{\text{dc}}\times 10^{NI/20}\sqrt{\log(f_2/f_1)},
+		\end{align}
+		where \(\mathrm{NI}\) is the noise index, \(V_{\text{dc}}\) is the dc
+		voltage drop across the resistor, and \(f_1\)  and \(f_2\) represent the
+		frequency range over which the noise is being computed. Units of noise
+		index are \unit{\pico\volt\per\volt}. At higher frequencies the current
+		noise becomes less dominant compared to Johnson noise.
+	\item[Contact noise] Directly proportional to a constant that depends on
+		resistor material/size and upon the average dc current. The predominant
+		noise in carbon composition, carbon film, metal oxide and metal film is
+		composed of contact noise, which can be very large at low frequencies due
+		to a \(1/f\) frequency characteristic. Wirewound resistors do not have this
+		noise --- only resistors made of carbon particles. If no current  flows in
+		the resistor, the noise is equal to the thermal noise. The contact noise
+		increases as the current is increased. This means that for low-noise
+		operation, the dc or ac current should be kept low. The material and
+		geometry of a resistor greatly affects the contact noise, and therefore
+		doubles the power rating of the resistor, which increases the size and
+		area, and will reduce the contact noise generated by the resistor.
+	\item[Shot noise] Is dependent upon current --- the more average dc current
+		through a resistor, the more noise you get. To reduce this type of noise,
+		dc current levels must be kept low. This is often put into action in the
+		first amplifier stage or in low-level stages such as reverb-recover amps in
+		audio, where it is the most critical. It’s best to use a wirewound or
+		metal-film resistor in these applications, unless you are making a
+		high-frequency amp where inductance of the wirewound resistor comes into
+		play.
+\end{description}
+
+The best resistors for low-noise applications are precision resistors.
+Precision wirewounds tend to be the quietest, having only thermal noise (unless
+terminations are faulty), but they aren’t readily available in large resistance
+values and are usually ­ inductive. Precision film resistors also have
+extremely low noise. Next down the line comes metal oxide, followed by carbon
+film, and, last, carbon composition. Composition resistors show some degree of
+noise due to internal electrical contacts between conducting particles held
+together with the binder. And remember that, when designing critical circuits,
+you’ll cut down on contact noise (not applicable to wirewounds) by using the
+resistor with the largest practical wattage. Don’t forget potentiometers, which
+are most commonly carbon composition. They generally have large values (e.g.,
+1\unit{\mega\ohm} for volume control), which make them major sources of noise
+in an amplifier. For absolute lowest noise, conductive plastic element pots
+should be used, employing the lowest practical value and largest practical
+power rating. \cite{practical_electronics}
+
+\subsubsection{Voltage Coefficient of Resistance}
+Resistance is not always independent of the applied voltage. The voltage
+coefficient of resistance is the change in resistance per unit change in
+voltage, expressed as a percentage of the resistance at 10 percent of rated
+voltage. The voltage coefficient is given by the relationship:
+\cite{practical_electronics}
+\begin{gather}
+	\text{Voltage coefficient} = \frac{100\times(R_1-R_2)}{R_2(V_1-V_2)},
+\end{gather}
+where \(R_1\)  is the resistance at the rated voltage \(V_1\) and \(R_2\)  is
+the resistance at 10 percent of rated voltage \(V_2\). Voltage coefficient is
+associated with carbon-composition and carbon-film resistors, and is a function
+of the resistor's value and its composition. \cite{practical_electronics}
+
+\subsubsection{Stability}
+This is defined as the repeatability of resistance of a resistor when measured
+at a reference temperature and subjected to a variety of operating and
+environmental conditions over time. Stability is difficult to specify and
+measure, since it is application dependent. Generally, wirewound and bulk-metal
+resistor designs are best, while designs using composition resistors are least
+stable. \cite{practical_electronics}
+
+\subsubsection{Reliability}
+This is the degree of probability that a resistor will perform its desired
+function. It is typically rated as mean time between failures (MTBF) or failure
+rate per 1000 hours of operation. Reliability isn't usually a critical
+specification for most general-purpose applications. It often does pop up in
+critical applications, such as those used by the military.
+\cite{practical_electronics}
+
+\subsubsection{Temperature Rating}
+This is the maximum allowable temperature at which the resistor may be used.
+Often, two temperatures are used --- one for full loads up to, say,
++85\unit{\celsius} derated to no load at +145\unit{\celsius}. Temperature range
+may be specified, for example, from -55\unit{\celsius} to +275\unit{\celsius}
+\cite{practical_electronics}
+
+\subsection{Capacitors}
+Capacitors perform a number of functions in electronics. One major function is
+simple \emph{energy storage}, where charge from an applied current is stored
+within the capacitor and later released back into the circuit as useful
+current. The rate of charging and discharging can be controlled by placing a
+resistor in series with the capacitor. This effect is often used in
+high-current discharge circuits (photoflashes, actuators, etc.), as well as
+small energy backup supplies for low-power memory ICs. It is also used to
+smooth out power supply ripple, control timing in ICs, and alter the shape of
+waveforms. \cite{practical_electronics}
+
+The second major function of a capacitor when placed in series with a signal
+path is to block dc while allowing ac signal components to pass. A capacitor
+used in this way is referred to as a dc-blocking or ac-coupling capacitor. At
+dc, a capacitor’s impedance is ideally infinite --- no current flows, no dc
+levels within a mixed signal are passed. However, if an ac signal is applied,
+the capacitor’s impedance becomes a finite value, dependent on the frequency of
+the signal. The higher the frequency, the lower the impedance --- ideally.
+\cite{practical_electronics}
+
+Capacitor placed in parallel with a signal path (i.e., to ground) has an effect
+opposite that of the coupling capacitor. Instead, it acts as a decoupling
+capacitor, allowing dc to continue along the path, while diverting
+high-frequency signal components to ground—the capacitor acts as a
+low-impedance path to ground. A similar effect, known as bypassing, is used
+when a capacitor is placed across a particular circuit element to divert
+unwanted frequencies around it. Decoupling and bypassing become fundamental
+when removing unwanted random high-frequency ripple and other undesired
+alterations within a supply voltage (or voltage-critical location) caused by
+random noise, or sudden current demands generated by accompanying circuit
+elements. \cite{practical_electronics}
+
+
 \end{document}

@@ -290,6 +290,43 @@ Capacitors may be connected in series to enable the group to withstand a larger
 voltage than any individual capacitor is rated to withstand (the maximum
 voltage ratings add). \cite{practical_electronics}
 
+\subsection{RC Time Constant}
+When a capacitor is connected to a dc voltage source, it will charge up almost
+instan- taneously. Likewise, a charged capacitor that is shorted with a wire
+will discharge almost instantaneously. However, with some resistance added, the
+rate of charge or discharge follows an exponential pattern. There are numerous
+applications that use controlled charge and discharge rates, such as timing
+ICs, oscillators, waveform shapers, and low-discharge power backup
+circuits. \cite{practical_electronics}
+
+When charging a capacitor through a resistor, the voltage across the capacitor,
+with respect to time, is given as:
+\begin{gather}
+	V(t) = V_S (1 - e^{-(t/RC)}, \tag{Charging RC}
+\end{gather}
+where \(V(t)\) is the capacitor voltage in volts at time \(t\) , \(V_S\) is the
+source voltage, \(t\) is the time in seconds after the source voltage is
+applied, \(R\)  is the circuit resistance in ohms, and \(C\) is the capacitance
+in farads. Theoretically, the charging process never really finishes, but
+eventually the charging current drops to an unmeasurable value. A convention
+often used is to let \(t = RC\) , which makes \( V(t) = 0.632\unit{\volt}\).
+The \(RC\) term is called the time constant of the circuit and is the time in
+seconds required to charge the capacitor to 63.2 percent of the supply voltage.
+The lowercase tau (\(\tau\)) is often used to represent \(RC\) : \(\tau = RC\).
+After two time constants (\(t = 2RC = 2\tau\)), the capacitor charges ­ another
+63.2 percent of the difference between the capacitor voltage at one time
+constant and the supply voltage, for a total change of 86.5 percent. After
+three time constants, the capacitor reaches 95 percent of the supply voltage.
+After five time constants, a capacitor is considered fully charged, having
+reached 99.24 percent of the source voltage. \cite{practical_electronics}
+
+For a discharging capacitor, the following equation is used:
+\cite{practical_electronics}
+\begin{gather}
+	V(t) = V_S e^{-(t/RC)}. \tag{Discharging RC}
+\end{gather}
+
+
 \subsection{Capacitors and AC}
 Everything that was discussed about capacitors in dc circuits also applies in
 ac circuits, with one major exception. While a capacitor in a dc circuit will
@@ -557,7 +594,7 @@ while rejecting others. \cite[sec. 2.23]{practical_electronics}
 	\item[Notch Filter] acts to pass a wide range of frequencies, while
 		attenuating a narrow band of frequencies.
 \end{description}
-
+just
 
 
 
